@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --color-serviceseguros-blue: #003366;
+  --color-serviceseguros-light-blue: #0055a4;
+  --color-serviceseguros-accent: #00a8e8;
+  --color-souzaborges-gold: #c5a059;
+  --color-souzaborges-dark: #1a1a1a;
+
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+@layer base {
+  :root {
+    background-color: #f8fafc;
+    color: #1a1a1a;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold text-(--color-serviceseguros-blue);
+  }
+}
+
+@utility glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+}
+
+@utility gradient-bg {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+@utility btn-primary {
+  @apply px-6 py-3 bg-(--color-serviceseguros-blue) text-white rounded-lg font-semibold transition-all hover:bg-(--color-serviceseguros-light-blue) hover:shadow-lg active:scale-95 cursor-pointer;
+}
+
+@utility btn-secondary {
+  @apply px-6 py-3 border-2 border-(--color-serviceseguros-blue) text-(--color-serviceseguros-blue) rounded-lg font-semibold transition-all hover:bg-(--color-serviceseguros-blue) hover:text-white active:scale-95 cursor-pointer;
+}
